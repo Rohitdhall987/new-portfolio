@@ -6,13 +6,14 @@
     height: 100vh;
     z-index: -1;
 
-    mask-image: linear-gradient(30deg, transparent 45%, white 50%, transparent 65%);
+
+    mask-image: linear-gradient(30deg, transparent 45%, white 50%, transparent 55%);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 300% 100%;
     mask-size: 300% 100%;
-    animation: maskMove 4s linear infinite;
-    -webkit-animation: maskMove 4s linear infinite;
+    animation: maskMove 6s linear infinite;
+    -webkit-animation: maskMove 6s linear infinite;
 }
 
 @keyframes maskMove {

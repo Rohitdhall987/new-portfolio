@@ -1,6 +1,5 @@
-// MatrixRain.jsx
 import React, { useEffect, useRef } from "react";
-import "./MatrixRain.css"; // We’ll define mask animation here
+import "./MatrixRain.css";
 
 const MatrixRain = () => {
     const canvasRef = useRef(null);
@@ -9,17 +8,25 @@ const MatrixRain = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
+        // Handle high DPI screens (Retina, etc.)
+        const scale = window.devicePixelRatio || 1;
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+        ctx.scale(scale, scale);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
 
         const binary = "01";
         const fontSize = 16;
-        const columns = canvas.width / fontSize;
+        const columns = Math.floor(width / fontSize);
         const drops = Array.from({ length: columns }).fill(1);
 
         const draw = () => {
             ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(0, 0, width, height);
 
             ctx.fillStyle = "#dadada";
             ctx.font = `${fontSize}px monospace`;
@@ -29,7 +36,7 @@ const MatrixRain = () => {
                 const x = index * fontSize;
                 ctx.fillText(text, x, y * fontSize);
 
-                if (y * fontSize > canvas.height && Math.random() > 0.975) {
+                if (y * fontSize > height && Math.random() > 0.975) {
                     drops[index] = 0;
                 }
                 drops[index]++;
@@ -39,9 +46,16 @@ const MatrixRain = () => {
         const interval = setInterval(draw, 50);
 
         const handleResize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            width = window.innerWidth;
+            height = window.innerHeight;
+
+            canvas.width = width * scale;
+            canvas.height = height * scale;
+            ctx.scale(scale, scale);
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
         };
+
         window.addEventListener("resize", handleResize);
 
         return () => {

@@ -8,7 +8,7 @@ function App() {
         <div>
             <MatrixRain />
             <div style={{ position: "relative", zIndex: 1,}}>
-                <div style={{width:'100%',height:'100%'}}>
+                <div style={{width:'100%',textAlign:'center'}}>
                     <span className="raleway heroText">CODE</span>
                 </div>
             </div>
