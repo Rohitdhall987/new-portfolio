@@ -25,36 +25,6 @@ function App() {
                             </Center>
 
 
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center>
-
-
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center>
-
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center>
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center><Center>
-                            <span className="raleway heroText">CODE</span>
-                        </Center>
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center>
-                            v
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center>
-                            <Center>
-                                <span className="raleway heroText">CODE</span>
-                            </Center><Center>
-                            <span className="raleway heroText">CODE</span>
-                        </Center>
-
 
 
 
@@ -83,19 +53,7 @@ const Center = styled.div`
 
 `;
 
-const Red = styled.div`
-    width: 100%;
-    height: 100vh;
-    background: red;
 
-`;
-
-const BLue = styled.div`
-    width: 100%;
-    height: 100vh;
-    background: blue;
-
-`;
 const Float = styled.div`
     width: 100%;
     position: fixed;
