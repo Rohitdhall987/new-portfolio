@@ -53,7 +53,6 @@ const Center = styled.div`
 
 `;
 
-
 const Float = styled.div`
     width: 100%;
     position: fixed;
