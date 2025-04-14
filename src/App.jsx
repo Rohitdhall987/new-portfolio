@@ -25,15 +25,6 @@ function App() {
                             </Center>
 
 
-
-
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -57,5 +48,5 @@ const Float = styled.div`
     width: 100%;
     position: fixed;
     z-index: 20;
-    top: 0;
+    top: 10;
 `;

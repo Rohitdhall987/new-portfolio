@@ -6,7 +6,7 @@ const Navbar = () => {
     const [indicatorStyle, setIndicatorStyle] = useState({});
     const navRefs = useRef({});
 
-    const tabs = ['home', 'about', 'services', 'contact'];
+    const tabs = ['Home', 'About', 'Services', 'Contact'];
 
     useEffect(() => {
         const currentRef = navRefs.current[activeTab];
