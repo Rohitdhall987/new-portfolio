@@ -165,10 +165,7 @@ function Home() {
             <h2>SKILLS</h2>
             <div className="tech-badges">
                 {[
-                    "HTML", "CSS", "JavaScript","C++", "Python", "React", "Node.js","Tailwind CSS",  "Flutter", "Firebase",
-                     "Express",
-                      "MongoDB", "Sql",
-                    "Postman", "Git", "GitHub", "AWS",
+                    "HTML", "CSS", "JavaScript","C++", "Python", "React", "Node.js","Tailwind CSS",  "Flutter", "Firebase", "Express", "MongoDB", "Sql","Postman", "Git", "GitHub", "AWS",
                 ].map((skill, i) => (
                     <div className="badge" key={i}>{skill}</div>
                 ))}
